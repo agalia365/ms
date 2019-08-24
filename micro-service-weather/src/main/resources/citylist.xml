@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<city id="0201" name="上海">
+    <county id="020101" name="上海" weatherCode="101020100"/>
+    <county id="020102" name="闵行" weatherCode="101020200"/>
+    <county id="020103" name="宝山" weatherCode="101020300"/>
+    <county id="020104" name="嘉定" weatherCode="101020500"/>
+    <county id="020105" name="浦东南汇" weatherCode="101020600"/>
+    <county id="020106" name="金山" weatherCode="101020700"/>
+    <county id="020107" name="青浦" weatherCode="101020800"/>
+    <county id="020108" name="松江" weatherCode="101020900"/>
+    <county id="020109" name="奉贤" weatherCode="101021000"/>
+    <county id="020110" name="崇明" weatherCode="101021100"/>
+    <county id="020111" name="徐家汇" weatherCode="101021200"/>
+    <county id="020112" name="浦东" weatherCode="101021300"/>
+</city>
