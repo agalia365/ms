@@ -44,7 +44,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
         ResponseEntity<String> resEntity = restTemplate.getForEntity(uri, String.class);
         if (resEntity.getStatusCode().equals(HttpStatus.OK)) {
             String strBody = resEntity.getBody();
-//            logger.info(strBody);
+            logger.info(strBody);
             ops.set(uri, strBody, TIME_OUT, TimeUnit.SECONDS);
         }
     }
