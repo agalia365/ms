@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.leo.weather</groupId>
-    <artifactId>ms-weather-api</artifactId>
+    <artifactId>ms-weather-report</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ms-weather-api</name>
+    <name>ms-weather-report</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,13 +21,12 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
