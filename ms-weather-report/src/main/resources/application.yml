@@ -14,6 +14,8 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 6000
+  application:
+    name: ms-weather-report
   thymeleaf:
    # prefix: classpath:/templates/
     check-template-location: true
@@ -23,3 +25,16 @@ spring:
     mode: HTML5
     servlet:
       content-type: text/html
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka
+      enabled: true
+      register-with-eureka: true
+      fetch-registry: true
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: ms-weather-report
+    prefer-ip-address: true

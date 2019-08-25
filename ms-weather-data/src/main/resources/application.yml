@@ -13,3 +13,19 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 6000
+  application:
+    name: ms-weather-data
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka
+      enabled: true
+      register-with-eureka: true
+      fetch-registry: true
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: ms-weather-data
+    prefer-ip-address: true
+
+#feign.client.config.feignName.connectTimeout:500
