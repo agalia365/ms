@@ -1,0 +1,29 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: ms-weather-gateway-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka
+      enabled: true
+      register-with-eureka: true
+      fetch-registry: true
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: ms-weather-gateway-zuul
+    prefer-ip-address: true
+
+#这里zuul是自动依赖hystrix，ribbon的，不是面向单机
+zuul:
+  routes:
+    city:
+      path: /city/**
+      serviceId: ms-weather-city
+    api:
+      path: /api/**
+      serviceId: ms-weather-api
