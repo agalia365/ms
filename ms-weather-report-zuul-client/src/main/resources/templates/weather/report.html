@@ -19,19 +19,28 @@
         </select>
 
     </div>
-    <div>
-        <div class="row text-success">
-            城市: <span th:text="${reportModel.report.city}"></span>
-        </div>
-        <div class="row text-success">
-            温度: <span th:text="${reportModel.report.wendu}"></span>
-        </div>
-        <div class="row text-success">
-            温馨提示: <span th:text="${reportModel.report.ganmao}"></span>
+    <div class="row">
+        <div  th:if="${reportModel.report} != null">
+            <div class="row text-success">
+                城市: <span th:text="${reportModel.report.city}"></span>
+            </div>
+            <div class="row text-success">
+                温度: <span th:text="${reportModel.report.wendu}"></span>
+            </div>
+            <div class="row text-success">
+                温馨提示: <span th:text="${reportModel.report.ganmao}"></span>
+            </div>
         </div>
     </div>
+    <div th:if="${reportModel.report} == null">
 
-    <div class="row" >
+        <p>
+            天气数据API服务暂不可用
+
+        </p>
+    </div>
+
+    <div class="row" th:if="${reportModel.report} != null">
         <div class="card" th:each="forecast: ${reportModel.report.forecast}">
             <div class="card-body border-info">
                 <p class="card-text text-info" th:text="${forecast.date}"></p>

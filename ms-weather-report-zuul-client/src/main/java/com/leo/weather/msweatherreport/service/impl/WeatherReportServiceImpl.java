@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class WeatherReportServiceImpl implements WeatherReportService {
 
     private Logger logger = LoggerFactory.getLogger(WeatherReportServiceImpl.class);
+
     @Autowired
     private DataClient dataClient;
 
@@ -20,6 +21,10 @@ public class WeatherReportServiceImpl implements WeatherReportService {
     public Weather getDataByCityName(String cityName) {
         WeatherResponse response = dataClient.getDataByCityName(cityName);
         System.out.println(response);
-        return response.getData();
+        if(response != null) {
+            return response.getData();
+        } else {
+            return null;
+        }
     }
 }
