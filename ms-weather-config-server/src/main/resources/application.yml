@@ -1,0 +1,25 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: ms-weather-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leo365zhou/ms
+          searchPaths: cofig-repo
+          username: leo365zhou
+          password: Iss@2019
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka
+      enabled: true
+      register-with-eureka: true
+      fetch-registry: true
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: ms-weather-config-server
+    prefer-ip-address: true
